@@ -1,13 +1,10 @@
-public class  Main{
+public class Main {
     public static void main(String[] args) {
-        Vehicle car = new Car();
-        car.drive();
-        car.brake();
-        System.out.println("\n");
+        Human human = new Human();
+        human.walk();
 
-        Vehicle truck = new Truck();
-        truck.drive();
-        truck.brake();
+        Fish fish = new Fish();
+        fish.swim();
     }
-
 }
+
