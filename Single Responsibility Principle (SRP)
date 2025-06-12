@@ -1,0 +1,52 @@
+//Bad Example
+public class EmployeeManager {
+    public void calculateSalary() {
+        // Logic to calculate employee salary
+        System.out.println("Calculating salary...");
+    }
+
+    public void saveToDatabase() {
+        // Logic to save employee details to the database
+        System.out.println("Saving to database...");
+    }
+
+    public void generateEmployeeReport() {
+        // Logic to generate employee report
+        System.out.println("Generating employee report...");
+    }
+}
+
+//Good Example
+// Class 1: Responsible for salary calculation
+public class SalaryCalculator {
+    public void calculateSalary() {
+        System.out.println("Calculating salary...");
+    }
+}
+
+// Class 2: Responsible for saving employee to database
+public class EmployeeRepository {
+    public void saveToDatabase() {
+        System.out.println("Saving to database...");
+    }
+}
+
+// Class 3: Responsible for generating reports
+public class ReportGenerator {
+    public void generateEmployeeReport() {
+        System.out.println("Generating employee report...");
+    }
+}
+
+//In use example
+public class EmployeeService {
+    public static void main(String[] args) {
+        SalaryCalculator salaryCalculator = new SalaryCalculator();
+        EmployeeRepository employeeRepository = new EmployeeRepository();
+        ReportGenerator reportGenerator = new ReportGenerator();
+
+        salaryCalculator.calculateSalary();
+        employeeRepository.saveToDatabase();
+        reportGenerator.generateEmployeeReport();
+    }
+}
